@@ -1,6 +1,0 @@
----
-inside:
-  hosts:
-    docker:
-      ansible_connection: local
-
