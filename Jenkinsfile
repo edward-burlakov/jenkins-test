@@ -1,6 +1,5 @@
 pipeline {
   agent {
-#    label 'linux'
     docker {
       alwaysPull true
       image 'alainchiasson/docker-molecule'
