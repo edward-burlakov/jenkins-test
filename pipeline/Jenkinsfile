@@ -35,7 +35,7 @@ pipeline {
     }
     stage ("Validate Tests Pass."){
       steps {
-        sh 'cd simple && molecule test'
+        sh 'cd sample && molecule test'
       }
     }
   }

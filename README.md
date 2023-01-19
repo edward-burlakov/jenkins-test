@@ -14,9 +14,9 @@
 ![img_6.png](images/img_6.png)
 ---
 
-## 2. Прописываем в [inventory](./infrastructure/inventory/cicd/hosts.yml) [playbook'a](./infrastructure/site.yml) созданные хосты.
+## 2. Прописываем в [inventory](infrastructure/inventory/cicd/hosts.yml) [playbook'a](infrastructure/site.yml) созданные хосты.
 
-## 3. Проверяем линтером ansible-lint  файл  [playbook'a](./infrastructure/site.yml)  на ошибки. Исправляем ошибки .
+## 3. Проверяем линтером ansible-lint  файл  [playbook'a](infrastructure/site.yml)  на ошибки. Исправляем ошибки .
 
 ## 4. Устанавливаем используемую библиотеку ansible.posix
 
@@ -158,7 +158,7 @@ https://molecule.readthedocs.io/en/latest/ci.html ( Раздел "Jenkins Pipeli
 ---            
  
 4. Создать Multibranch Pipeline на запуск `Jenkinsfile` из репозитория.
-6. Создать Scripted Pipeline, наполнить его скриптом из [pipeline](./pipeline).
+6. Создать Scripted Pipeline, наполнить его скриптом из [pipeline](pipeline).
 7. Внести необходимые изменения, чтобы Pipeline запускал `ansible-playbook` без флагов `--check --diff`, если не установлен параметр при запуске джобы (prod_run = True), по умолчанию параметр имеет значение False и запускает прогон с флагами `--check --diff`.
 8. Проверить работоспособность, исправить ошибки, исправленный Pipeline вложить в репозиторий в файл `ScriptedJenkinsfile`.
 9. Отправить ссылку на репозиторий с ролью и Declarative Pipeline и Scripted Pipeline.
